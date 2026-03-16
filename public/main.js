@@ -22,7 +22,7 @@ async function getWeather() {
   status.innerHTML = '<p class="loading">Loading...</p>';
 
   try {
-    const response = await fetch(`/search?city=${encodeURIComponent(city)}`);
+    const response = await fetch(`/search?city=${encodeURIComponent(city)}&state=${encodeURIComponent(state)}`);
     const data = await response.json();
 
     if (!response.ok) {
