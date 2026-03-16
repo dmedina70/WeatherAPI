@@ -15,7 +15,7 @@ app.get('/search', async (req, res) => {
     const state = req.query.state
 
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/forecast?q=${encodeURIComponent(city)},${encodeURIComponent(state)}&appid=${process.env.api_key}&units=metric`
+      `https://api.openweathermap.org/data/2.5/forecast?q=${encodeURIComponent(city)},${encodeURIComponent(state)}&appid=${process.env.API_KEY}&units=metric`
     );
 
     const data = await response.json();
